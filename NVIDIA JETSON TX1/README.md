@@ -1,0 +1,1 @@
+The note of NVIDIA JETSON TX1/TX2.
