@@ -3,7 +3,7 @@
 ----------
 
 - **转载请注明作者和出处：http://blog.csdn.net/u011475210**
-- **代码地址：https://github.com/WordZzzz/nowcoder/blob/master/AtOffer**
+- **代码地址：https://github.com/WordZzzz/Note/tree/master/AtOffer**
 - **刷题平台：https://www.nowcoder.com/**
 - **题&emsp;&emsp;库：剑指offer**
 - **编&emsp;&emsp;者：WordZzzz**
