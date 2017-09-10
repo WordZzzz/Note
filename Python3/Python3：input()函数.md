@@ -1,4 +1,4 @@
-**<font color="black" size=6 face="仿宋">Python3：input()函数</font>**
+# Python3：input()函数
 
 ----------
 
@@ -9,96 +9,68 @@
 
 ----------
 
-**<font color="black" size=5 face="仿宋">一、Python2.x中raw_input( )和input( )函数</font>**
+[toc]
 
-&emsp;&emsp;老规矩，本渣渣先贴出help信息，再进行讲解。
+## Python2.x中range()函数：
 
-&emsp;&emsp;在Python2.x中raw_input( )和input( )，两个函数都存在，其中区别为
-
-```python
->>> help(raw_input)
-Help on built-in function raw_input in module __builtin__:
-
-raw_input(...)
-    raw_input([prompt]) -> string
-
-    Read a string from standard input.  The trailing newline is stripped.
-    If the user hits EOF (Unix: Ctl-D, Windows: Ctl-Z+Return), raise EOFError.
-    On Unix, GNU readline is used if enabled.  The prompt string, if given,
-    is printed without a trailing newline before reading.
-```
-
-raw_input( )---将所有输入作为字符串看待，返回字符串类型
+&emsp;&emsp;老规矩，help！
 
 ```python
->>> help(input)
-Help on built-in function input in module __builtin__:
+>>> help(range)
+Help on built-in function range in module __builtin__:
 
-input(...)
-    input([prompt]) -> value
+range(...)
+    range(stop) -> list of integers
+    range(start, stop[, step]) -> list of integers
 
-    Equivalent to eval(raw_input(prompt)).
+    Return a list containing an arithmetic progression of integers.
+    range(i, j) returns [i, i+1, i+2, ..., j-1]; start (!) defaults to 0.
+    When step is given, it specifies the increment (or decrement).
+    For example, range(4) returns [0, 1, 2, 3].  The end point is omitted!
+    These are exactly the valid indices for a list of 4 elements.
 ```
 
-input( )-----只能接收“数字”的输入，在对待纯数字输入时具有自己的特性，它返回所输入的数字的类型（ int, float ）
+&emsp;&emsp;可以看出，在Python2.x中，range()返回的是可以用来迭代的列表。
 
-example：
+## Python3.x中range()函数：
+
+&emsp;&emsp;同样，help！
 
 ```python
->>> user=raw_input("please input:")         
-please input:wei               #  raw_input输入  字符串  成功  
->>> user  
-'wei'  
->>> user=input("please input:")            
-please input:123               #  input 输入  数字  成功（返回的是数字）  
->>> user  
-123  
->>> user=raw_input("please input:")  
-please input:111           #  raw_input 输入  数字  成功（返回的还是当成字符串）  
->>> user  
-'111'  
->>> user=input("please input:")  
-please input:wei                          #  input  输入字符串   失败  
-Traceback (most recent call last):  
-  File "<stdin>", line 1, in ?  
-  File "<string>", line 0, in ?  
-NameError: name 'wei' is not defined 
+>>> help(range)
+Help on class range in module builtins:
+
+class range(object)
+ |  range(stop) -> range object
+ |  range(start, stop[, step]) -> range object
+ |
+ |  Return an object that produces a sequence of integers from start (inclusive)
+ |  to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.
+ |  start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.
+ |  These are exactly the valid indices for a list of 4 elements.
+ |  When step is given, it specifies the increment (or decrement).
 ```
 
-**<font color="black" size=5 face="仿宋">二、python3.x中的input( )函数</font>**
+&emsp;&emsp;啊哦，在Python3.x中，range()返回的是一个range对象。
 
-&emsp;&emsp;在python3.x中raw_input( )和input( )进行了整合，去除了raw_input( )，仅保留了input( )函数，其接收任意任性输入，将所有输入默认为字符串处理，并返回字符串类型。
+## 样例对比：
+Python2.x：
 
 ```python
->>> help(input)
-Help on built-in function input in module builtins:
-
-input(prompt=None, /)
-    Read a string from standard input.  The trailing newline is stripped.
-
-    The prompt string, if given, is printed to standard output without a
-    trailing newline before reading input.
-
-    If the user hits EOF (*nix: Ctrl-D, Windows: Ctrl-Z+Return), raise EOFError.
-    On *nix systems, readline is used if available.
+>>> range(1,10)
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-example：
+Python3.x：
 
+```python
+>>> range(1,10)
+range(1, 10)
+>>> list(range(1,10))
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
->>> user=raw_input("please input:")                 #没有了raw_input  
-Traceback (most recent call last):  
-  File "<stdin>", line 1, in <module>  
-NameError: name 'raw_input' is not defined  
->>> user=input("please input:")  
-please input:wei  
->>> user  
-'wei'  
->>> user=input("please input:")                     #input的输出结果都是作为字符串  
-please input:123  
->>> user  
-'123'
-```
+
+&emsp;&emsp;通过list强制类型转换，可以在Python3.x中实现Python2.x中的range函数一样的效果。
 
 **<font color="red" size=3 face="仿宋">系列教程持续发布中，欢迎订阅、关注、收藏、评论、点赞哦～～(￣▽￣～)～</font>**
 
