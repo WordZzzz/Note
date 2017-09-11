@@ -68,7 +68,7 @@ class Solution:
         return self.sum
 ```
 
-### reduce
+### reduce：
 
 ```python
 # -*- coding:utf-8 -*-
