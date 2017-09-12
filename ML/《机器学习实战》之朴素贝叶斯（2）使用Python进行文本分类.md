@@ -30,7 +30,7 @@
 # -*- coding: UTF-8 -*-
 """
 Created on Sep 08, 2017
-kNN: k Nearest Neighbors
+Naive Bayes
 @author: wordzzzz
 """
 
