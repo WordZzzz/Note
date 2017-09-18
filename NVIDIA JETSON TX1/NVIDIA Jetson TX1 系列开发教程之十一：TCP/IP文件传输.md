@@ -1,4 +1,4 @@
-**<font color="black" size=6 face="仿宋">NVIDIA Jetson TX1 系列开发教程之十一：TCP/IP文件传输</font>**
+**<font color="black" size=6 face="仿宋">NVIDIA Jetson TX1 系列开发教程之十一：TCP IP文件传输</font>**
 
 ----------
 
