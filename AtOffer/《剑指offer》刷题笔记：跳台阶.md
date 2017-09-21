@@ -99,7 +99,7 @@ class Solution:
             third = first + second
             first = second
             second = third
-        return third;
+        return third
 ```
 
 **<font color="red" size=3 face="仿宋">系列教程持续发布中，欢迎订阅、关注、收藏、评论、点赞哦～～(￣▽￣～)～</font>**
