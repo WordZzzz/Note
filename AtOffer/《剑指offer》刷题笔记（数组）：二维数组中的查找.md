@@ -114,10 +114,22 @@ class Solution:
     def Find(self, target, array):
         # write code here
         n=len(array)
+        flag='false'
         for i in range(n):
             if target in array[i]:
-                return True
-        return False
+                flag='true';
+                break
+        return flag
+while True:
+    try:
+        S=Solution()
+        # 字符串转为list
+        L=list(eval(raw_input()))
+        array=L[1]
+        target=L[0]
+        print(S.Find(target, array))
+    except:
+        break
 ```
 
 **<font color="red" size=3 face="仿宋">系列教程持续发布中，欢迎订阅、关注、收藏、评论、点赞哦～～(￣▽￣～)～</font>**
