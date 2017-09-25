@@ -11,9 +11,13 @@
 
 [toc]
 
-**<font color="red" size=3 face="仿宋">&emsp;&emsp;各位看客注意了，本章教程无关硬件平台，在ubuntu下具有通用性，别被标题赶跑了哦。我踩过的坑，您就不要再踩了，枪在手，跟我走。有问题欢迎评论区留言~</font>**
+----------
 
-**<font color="red" size=3 face="仿宋">&emsp;&emsp;系列教程持续发布中，欢迎订阅、关注、收藏、评论、点赞哦～～(￣▽￣～)～</font>**
+**<font color="red" size=4 face="仿宋">&emsp;&emsp;各位看客注意了，本章教程无关硬件平台，在ubuntu下具有通用性，别被标题赶跑了哦。我踩过的坑，您就不要再踩了，枪在手，跟我走。有问题欢迎评论区留言~</font>**
+
+**<font color="red" size=4 face="仿宋">&emsp;&emsp;系列教程持续发布中，欢迎订阅、关注、收藏、评论、点赞哦～～(￣▽￣～)～</font>**
+
+----------
 
 ## 前言
 
@@ -241,7 +245,10 @@ $ ./simpledom
 {"project":"rapidjson","stars":11}
 ```
 
+----------
+
 **<font color="red" size=3 face="仿宋">系列教程持续发布中，欢迎订阅、关注、收藏、评论、点赞哦～～(￣▽￣～)～</font>**
 
 **<font color="red" size=3 face="仿宋">完的汪(∪｡∪)｡｡｡zzz</font>**
 
+----------
