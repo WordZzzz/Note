@@ -13,9 +13,9 @@
 
 ----------
 
-**<font color="red" size=3 face="仿宋">&emsp;&emsp;各位看客注意了，本章教程无关硬件平台，在ubuntu下具有通用性，别被标题赶跑了哦。我踩过的坑，您就不要再踩了，枪在手，跟我走。有问题欢迎评论区留言~</font>**
+**<font color="red" size=4 face="仿宋">&emsp;&emsp;各位看客注意了，本章教程无关硬件平台，在ubuntu下具有通用性，别被标题赶跑了哦。我踩过的坑，您就不要再踩了，枪在手，跟我走。有问题欢迎评论区留言~</font>**
 
-**<font color="red" size=3 face="仿宋">&emsp;&emsp;系列教程持续发布中，欢迎订阅、关注、收藏、评论、点赞哦～～(￣▽￣～)～</font>**
+**<font color="red" size=4 face="仿宋">&emsp;&emsp;系列教程持续发布中，欢迎订阅、关注、收藏、评论、点赞哦～～(￣▽￣～)～</font>**
 
 ----------
 
@@ -675,6 +675,10 @@ int main(int argc, char *argv[])
 ```
 
 &emsp;&emsp;代码里面的simhei.tff是字体名称，需要拷贝到你程序的执行目录下，当然也可以直接在代码中写字体的路径。window下一般都有这个字体，ubuntu的话，来windows下拷贝一下就好，windows的的字体目录：C:\Windows\Fonts。
+
+## 敲重点
+
+**<font color="red" size=4 face="仿宋">&emsp;&emsp;如果你的代码的编码格式本身就是GBK，那么你就不需要UTF-8转GBK这个过程，即第二个部分就可以略过；但是，如果你进行第三部分的时候，发现部分汉字能显示，部分不能显示，那就是编码问题，需要调用第二部分的UTF-8转GBK的函数。/font>**
 
 ----------
 
