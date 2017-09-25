@@ -47,6 +47,9 @@ char str4[] = "hello world";
 
 先遍历一遍字符串，统计处空格的总数，由此计算出替换之后的字符串的总长度。然后用两个指针从字符串的后面开始复制和替换。P1指向原始字符串的末尾，而P2指向替换之后的字符串的末尾，然后向前移动P1，逐个把它指向的字符复制到P2指向的位置，直到碰到第一个空格位置。碰到第一个空格之后，把P1向前移动一格，P2之前插入字符串“%20”，同时把P2向前移动三格。具体如图所示：
 
+<p></p>
+<div align=center><img src="http://img.blog.csdn.net/20170925111500819?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTQ3NTIxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"/></div>
+<p></p>
 
 
 由于所有的字符都只复制一次，因此时间效率为O(n)。
