@@ -1,5 +1,14 @@
 # Sublime Text 3 搭建Python开发环境 码代码 美如画
 
+----------
+
+- **转载请注明作者和出处：http://blog.csdn.net/u011475210**
+- **操作系统：WINDOWS 10**
+- **软件版本：Sublime Text 3 Build 3143**
+- **编&emsp;&emsp;者：WordZzzz**
+
+----------
+
 [toc]
 
 ## 前言
