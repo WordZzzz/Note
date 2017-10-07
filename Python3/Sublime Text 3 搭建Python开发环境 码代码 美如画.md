@@ -132,7 +132,7 @@ import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe0
 ]
 ```
 
-&emsp;&emsp;接下来配置快捷键，打开 Sublime > Preferences > Key Building ，在右侧栏（ User 部分）添加下面的代码。下面的代码用 F5 来执行当前 Python 脚本，用 F4 来实现切换至 IPython 命令行窗口。
+&emsp;&emsp;接下来配置快捷键，打开 Sublime > Preferences > Key Building ，在右侧栏（ User 部分）添加下面的代码。下面的代码用 F5 来执行当前 Python 脚本，用 F4 来实现切换至 Python 命令行窗口。
 
 ```
 [
@@ -145,7 +145,7 @@ import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe0
 	{"keys":["f4"],
 	"caption": "SublimeREPL: Python - IPython",
 	"command": "run_existing_window_command", "args":
-	{"id": "repl_python_ipython",
+	{"id": "repl_python",
 	"file": "config/Python/Main.sublime-menu"}}
 ]
 ```
