@@ -143,7 +143,7 @@ import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe0
 	"file": "config/Python/Main.sublime-menu"}}
 	,
 	{"keys":["f4"],
-	"caption": "SublimeREPL: Python - IPython",
+	"caption": "SublimeREPL: Python",
 	"command": "run_existing_window_command", "args":
 	{"id": "repl_python",
 	"file": "config/Python/Main.sublime-menu"}}
