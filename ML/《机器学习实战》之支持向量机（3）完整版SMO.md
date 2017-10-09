@@ -275,10 +275,35 @@ fullSet, iter: 2 i: 99, pairs changed 0
 iteration number: 3
 ```
 
+&emsp;&emsp;像之前一样，打印b和alpha，得出的数据用来画图。
+
+```python
+>>> b
+matrix([[-2.89901748]])
+>>> alphas[alphas > 0]
+matrix([[ 0.06961952,  0.0169055 ,  0.0169055 ,  0.0272699 ,  0.04522972,
+          0.0272699 ,  0.0243898 ,  0.06140181,  0.06140181]])
+>>> from numpy import *
+>>> shape(alphas[alphas > 0])
+(1, 9)
+>>> for i in range(100):
+... 	if alphas[i] > 0.0: print(dataArr[i], labelArr[i])
+... 
+[3.542485, 1.977398] -1.0
+[2.114999, -0.004466] -1.0
+[8.127113, 1.274372] 1.0
+[4.658191, 3.507396] -1.0
+[8.197181, 1.545132] 1.0
+[7.40786, -0.121961] 1.0
+[6.960661, -0.245353] 1.0
+[6.080573, 0.418886] 1.0
+[3.107511, 0.758367] -1.0
+```
+
 &emsp;&emsp;常数C一方面要保障所有样例的间隔不小于1.0，另一方面又要使得分类间隔要尽可能大，并且要在这两方面之间平衡。如果C很大，那么分类器就会将力图通过分隔超平面对多有的样例都正确分类。这种优化结果如下图，很明显，支持向量变多了。如果数据集非线性可分，就会发现支持向量会在超平面附近聚集成团。
 
 <p></p>
-<div align=center><img src="http://img.blog.csdn.net/20171009160736671?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTQ3NTIxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"/></div>
+<div align=center><img src="http://img.blog.csdn.net/20171009201631147?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTQ3NTIxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"/></div>
 <p></p>
 
 ## 分类测试
@@ -312,20 +337,26 @@ def calcWs(alphas, dataArr, classLabels):
 &emsp;&emsp;上述代码中最重要的就是for循环，实现多个数的乘积。虽然for循环遍历了数据集中的所有数据，但是最终起作用的只有支持向量。
 
 ```python
+>>> reload(svmMLiA)
+<module 'svmMLiA' from 'E:\\机器学习实战\\mycode\\Ch06\\svmMLiA.py'>
 >>> from numpy import *
+>>> ws = svmMLiA.calcWs(alphas, dataArr, labelArr)
+>>> ws
+array([[ 0.65307162],
+       [-0.17196128]])
 >>> datMat = mat(dataArr)
 >>> datMat[0]* mat(ws)+b
 matrix([[-0.92555695]])
 >>> labelArr[0]
 -1.0
->>> datMat[2]* mat(ws)+b
-matrix([[ 2.30436336]])
->>> labelArr[2]
-1.0
 >>> datMat[1]* mat(ws)+b
 matrix([[-1.36706674]])
 >>> labelArr[1]
 -1.0
+>>> datMat[2]* mat(ws)+b
+matrix([[ 2.30436336]])
+>>> labelArr[2]
+1.0
 ```
 
 &emsp;&emsp;上面的测试中，计算值大于0属于1类，小于0属于-1类。
