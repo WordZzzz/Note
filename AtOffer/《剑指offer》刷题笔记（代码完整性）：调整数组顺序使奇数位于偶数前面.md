@@ -59,7 +59,7 @@ public:
 
 ### 新建数组
 
-```
+```c
 class Solution {
 public:
     void reOrderArray(vector<int> &array) {
@@ -82,7 +82,7 @@ public:
 
 ### 双向队列
 
-```
+```c
 class Solution {
 public:
     void reOrderArray(vector<int> &array) {
@@ -118,7 +118,7 @@ class Solution:
 
 ### 新建列表
 
-```
+```python
 # -*- coding:utf-8 -*-
 class Solution:
     def reOrderArray(self, array):
@@ -135,7 +135,7 @@ class Solution:
 
 ### 双向队列
 
-```
+```python
 # -*- coding:utf-8 -*-
 from collections import deque
 class Solution:
