@@ -12,11 +12,32 @@
 
 [toc]
 
-## 解题思路：
+## 题目描述
+
+操作给定的二叉树，将其变换为源二叉树的镜像。
+
+二叉树的镜像定义：
+
+```
+源二叉树 
+    	    8
+    	   /  \
+    	  6   10
+    	 / \  / \
+    	5  7 9 11
+镜像二叉树
+    	    8
+    	   /  \
+    	  10   6
+    	 / \  / \
+    	11 9 7  5
+```
+
+## 解题思路
 还是BFS和DFS的套路，要么递归实现要么利用队列进行层序遍历。
 
-## C++版代码实现：
-### 递归：
+## C++版代码实现
+### 递归
 ```c
 /*
 struct TreeNode {
@@ -38,7 +59,7 @@ public:
     }
 };
 ```
-### 层序遍历：
+### 层序遍历
 ```c
 /*
 struct TreeNode {
@@ -67,8 +88,8 @@ public:
 };
 ```
 
-## Python版代码实现：
-### 递归：
+## Python版代码实现
+### 递归
 ```python
 # -*- coding:utf-8 -*-
 # class TreeNode:
@@ -85,7 +106,7 @@ class Solution:
             self.Mirror(root.left)
             self.Mirror(root.right)
 ```
-### 层序遍历：
+### 层序遍历
 ```python
 # -*- coding:utf-8 -*-
 # class TreeNode:
