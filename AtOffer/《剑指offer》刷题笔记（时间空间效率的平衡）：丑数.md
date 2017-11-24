@@ -24,13 +24,17 @@
 
 我们把当前数组里面最大的ugly记为M，那么，下一个ugly肯定是前面的数与2或者3或者5的乘积中的最小值。然后我们拿这个最小值和M进行比较，如果小于M，就说明已经存在于数组中，如果大于M，则说明需要添加进数组。需要注意的是，我们每次判断之后，我们只需要第一个比M大的值，其他的以后会重新计算。程序中通过t2、t3、t5分别记录上次计算用到的ugly的相应序号。
 
+比如现在res中存放的是[1,2,3]，此时，t2、t3都为1，t5为0，min(res[1] * 2, min(res[1] * 3, res[1] * 5)) 结果为4，res变为[1,2,3,4]，判断后t2变成2，以此类推。
+
+因为7之前的数（7除外）都是ugly，所以程序一开始的判断可以和i直接写index < 7。
+
 ## C++版代码实现
 
 ```c
 class Solution {
 public:
     int GetUglyNumber_Solution(int index) {
-        if(index <= 0)
+        if(index < 7)
             return index;
         vector<int> res(index);
         res[0] = 1;
@@ -56,7 +60,7 @@ public:
 class Solution:
     def GetUglyNumber_Solution(self, index):
         # write code here
-        if index <= 0:
+        if index < 7:
             return index;
         res = [1]
         t2 = t3 = t5 = 0
