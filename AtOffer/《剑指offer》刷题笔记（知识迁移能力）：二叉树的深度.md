@@ -38,8 +38,9 @@ public:
         return pRoot ? max(TreeDepth(pRoot->left),TreeDepth(pRoot->right))+1 :0;
     }
 };
-
-
+```
+### 层序遍历：
+```
 /*
 struct TreeNode {
 	int val;
@@ -48,11 +49,7 @@ struct TreeNode {
 	TreeNode(int x) :
 			val(x), left(NULL), right(NULL) {
 	}
-};
-```
-### 层序遍历：
-```
-*/
+};*/
 class Solution {
 public:
     int TreeDepth(TreeNode* pRoot)
