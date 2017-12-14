@@ -13,21 +13,9 @@
 
 [toc]
 
-## 前言
-
-同样的，这道题牛客网上没有。
-
 ## 题目描述
 
-定义一个函数，输入一个链表的头结点，反转该链表并输出反转后链表的头节点。链表定义如下：
-
-```c
-struct ListNode
-{
-    int m_nKey;
-    ListNode* m_pNext;
-}
-```
+输入一个链表，反转链表后，输出链表的所有元素。
 
 ## 解题思路
 
@@ -42,19 +30,28 @@ struct ListNode
 ## C++版代码实现
 
 ```c
-ListNode* ReverseList(ListNode* pHead)
-{
+/*
+struct ListNode {
+	int val;
+	struct ListNode *next;
+	ListNode(int x) :
+			val(x), next(NULL) {
+	}
+};*/
+class Solution {
+public:
+    ListNode* ReverseList(ListNode* pHead) {
     ListNode* pReversedHead = nullptr;
     ListNode* pNode = pHead;
     ListNode* pPrev = nullptr;
     while(pNode != nullptr)
     {
-        ListNode* pNext = pNode->m_pNext;
+        ListNode* pNext = pNode->next;
 
         if(pNext == nullptr)
             pReversedHead = pNode;
 
-        pNode->m_pNext = pPrev;
+        pNode->next = pPrev;
 
         pPrev = pNode;
         pNode = pNext;
@@ -62,6 +59,7 @@ ListNode* ReverseList(ListNode* pHead)
 
     return pReversedHead;
 }
+};
 ```
 
 **<font color="red" size=3 face="仿宋">系列教程持续发布中，欢迎订阅、关注、收藏、评论、点赞哦～～(￣▽￣～)～</font>**
