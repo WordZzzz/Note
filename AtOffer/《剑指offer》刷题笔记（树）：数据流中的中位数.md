@@ -21,7 +21,7 @@
 解法很多，直接列出表格吧。
 
 <p></p>
-<div align=center><img src="http://img.blog.csdn.net/20171221160256337?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTQ3NTIxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"/></div>
+<div align=center><img src="http://img.blog.csdn.net/20171226114037598?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTQ3NTIxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"/></div>
 <p></p>
 
 我们这里采用最优的最大最小堆来实现。下面来讨论一些细节问题。
