@@ -11,6 +11,8 @@ tags:
   - gitee
 ---
 
+[toc]
+
 ## 前言
 
 &emsp;&emsp;喜欢写Blog的人，会经历三个阶段。
@@ -53,7 +55,7 @@ tags:
 
 
 
-&emsp;&emsp;我一开始用的是jekyll，这是中文社区翻译出来的[中文开发文档](http://jekyllcn.com/)。我使用的主题是[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)，开发文档很详细。但是后来由于jekyll体验不是很好（中文资料少，我英语比较差我会说嘛），依赖环境总是出问题（需要安装ruby），而且我使用的这个主题是个人维护的，种种原因导致最后做出来的博客很难符合我的胃口，最后被我扔进了停尸房[jekyll_mysite](https://github.com/WordZzzz/jekyll_mysite)。
+&emsp;&emsp;我一开始用的是jekyll，这是中文社区翻译出来的[中文开发文档](http://jekyllcn.com/)。我使用的主题是[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)，开发文档很详细。但是后来由于jekyll体验不是很好（中文资料少，我英语比较差我会说嘛），依赖环境总是出问题（需要安装ruby），markdown采用的是Kramdown（Kramdown对我之前的一些博客格式支持的不是很好，我自己写文档用的都是小书匠，然后发表到CSDN，所以并不想花时间在改格式上面），而且我使用的这个主题是个人维护的，种种原因导致最后做出来的博客很难符合我的胃口，最后被我扔进了停尸房[jekyll_mysite](https://github.com/WordZzzz/jekyll_mysite)。
 
 
 
@@ -67,3 +69,108 @@ tags:
 
 &emsp;&emsp;其实先按照hexo配置开发环境，再按照next文档配置站点文件，完全可以轻松搭建起自己的博客。但是还是藏不住内心那颗年轻的心啊，终究还是搜罗了一些好玩的东西放到了自己的博客上，比如音乐播放器。
 
+&emsp;&emsp;下面我先简单介绍一下基于github平台、hexo框架的next主题博客开发步骤：
+
+- [Github上新建username.github.io仓库并初始化]()
+- [PC端安装hexo及其依赖项并熟悉开发流程](https://hexo.io/zh-cn/docs/index.html)
+- [下载我的主题文件](https://github.com/WordZzzz/hexo-next)或者[下载next主题文件](https://github.com/iissnan/hexo-theme-next)
+- [按照next官方教程验证主题](http://theme-next.iissnan.com/getting-started.html)
+- [按照next官方教程配置站点文件和主题文件](http://theme-next.iissnan.com/theme-settings.html)
+- [按照next官方教程集成第三方服务](http://theme-next.iissnan.com/third-party-services.html)
+- [生成静态文件](https://hexo.io/zh-cn/docs/generating.html)
+- [开启本地服务查看站点效果](https://hexo.io/zh-cn/docs/server.html)
+- [部署至Github](https://hexo.io/zh-cn/docs/deployment.html)
+
+&emsp;&emsp;文档都非常详细，下面我主要就第三方服务做一些说明。我提到的大部分三方服务在[next的官方文档](http://theme-next.iissnan.com/third-party-services.html)都提及到了，所以具体配置大家跟着官方文档走就行，我只是为每一类服务选择哪个做一下建议。
+
+### 评论系统
+
+我用的韩国的[livere](https://livere.com/)，从国内到国外，支持几乎全部社交账号登陆，具体步骤请按照[next的官方文档](http://theme-next.iissnan.com/third-party-services.html)操作。
+
+### 数据统计与分析
+
+[百度统计](https://tongji.baidu.com/web/welcome/login)和[google分析](https://www.google.com/intl/zh-CN/analytics/)我都加上了，具体步骤请按照[next的官方文档](http://theme-next.iissnan.com/third-party-services.html)操作。
+
+### 阅读量统计
+
+我用的[LeanCloud](https://leancloud.cn/)，具体操作步骤请直接跳转至[ 为NexT主题添加文章阅读量统计功能](https://notes.wanghao.work/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud)。
+
+### 内容分享服务
+
+我采用的是[need-more-share2](https://github.com/revir/need-more-share2)，直接在主题配置文件里面打开就行。
+
+### 搜索服务
+
+我采用的是[Swiftype](https://swiftype.com/)，具体步骤请按照[next的官方文档](http://theme-next.iissnan.com/third-party-services.html)操作。
+
+### 其他服务
+
+NexT 借助于 MathJax 来显示数学公式，此选项默认关闭，如果博客中有公式，那么一定要打开这个选项。
+
+### 网站收录
+
+[Google Webmaster tools](https://www.google.com/webmasters/tools/)收录特别快，具体步骤请按照[next的官方文档](http://theme-next.iissnan.com/third-party-services.html)操作。但是[百度站长](http://ziyuan.baidu.com/?castk=LTE%3D)收录的就很慢了，我的到现在还没被收录。
+
+&emsp;&emsp;最后想说一下其他一些配置，比如添加背景图片、侧边栏头像旋转、侧边栏鼠标滑入显示、背景音乐等等。
+
+next人性化的为用户提供了custom接口，我们可以在不影响主题文件的基础上进行个性化定制。
+
+
+### 给页面添加背景图片
+
+在theme/next/source/css/_custom文件夹下打开custom.styl文件，往里面添加以下代码：
+
+```
+body {
+  background: url(/images/blogbk.jpg) no-repeat;
+  /* 背景图垂直、水平均居中 */
+  background-position: center center;
+  /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+  background-attachment: fixed;
+  /* 让背景图基于容器大小伸缩 */
+  background-size: cover;
+  /* 设置背景颜色，背景图加载过程中会显示背景色 */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+```
+
+其中的css样式属性都可以根据你的自定义图片来更改，以达到最佳的效果。
+
+### 给侧边栏添加背景图片
+
+```
+#sidebar {
+            background:url(/images/sidebar.jpg);
+            background-size: cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            p,span,a {color: rgba(255, 255, 255, 1);}
+}
+```
+
+###  文字背景色以及半透明的设置
+
+在theme/next/source/css/_custom文件夹下打开custom.styl文件，往里面添加以下代码：
+
+```
+.content {
+            border-radius: 20px;
+			padding: 30px 60px 30px 60px;
+            background:rgba(255, 255, 255, 0.8) none repeat scroll !important;
+         }
+```
+
+其中border-radius是给文章背景设置圆角，margin-top是设置文章到顶部的距离，其中属性可根据自己的需要进行调整。
+
+### 评论(来必力)添加背景色
+在theme/next/source/css/_custom文件夹下打开custom.styl文件，往里面添加以下代码：
+
+```
+#lv-container {
+       border-radius: 20px;
+	   padding: 30px 60px 30px 60px;
+       background:rgba(255, 255, 255, 0.8) none repeat scroll !important;
+    }
+```
+
+和上面一样，背景色和圆角可自己调整更改。
