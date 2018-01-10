@@ -338,7 +338,7 @@ $ npm install aplayer --save
 var ap = new APlayer({
     element: document.getElementById('player1'),                       // Optional, player element
     narrow: false,                                                     // Optional, narrow style
-    autoplay: true,                                                    // Optional, autoplay song(s), not supported by mobile browsers
+    autoplay: false,                                                    // Optional, autoplay song(s), not supported by mobile browsers
     showlrc: 0,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
     mutex: true,                                                       // Optional, pause other players when this player playing
     theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
@@ -346,15 +346,26 @@ var ap = new APlayer({
     preload: 'metadata',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
     listmaxheight: '513px',                                             // Optional, max height of play list
     music: {                                                           // Required, music info, see: ###With playlist
-        title: 'Preparation',                                          // Required, music title
-        author: 'Hans Zimmer/Richard Harvey',                          // Required, music author
-        url: 'http://7xifn9.com1.z0.glb.clouddn.com/Preparation.mp3',  // Required, music url
-        pic: 'http://7xifn9.com1.z0.glb.clouddn.com/Preparation.jpg',  // Optional, music picture
-        lrc: '[00:00.00]lrc here\n[00:01.00]aplayer'                   // Optional, lrc, see: ###With lrc
+        title: '你曾是少年',                                          // Required, music title
+        author: 'cover',                                              // Required, music author
+        url: 'http://mp3.qqmusic.cc/yq/102426570.mp3',                // Required, music url
+        pic: '/images/visitor.jpg',                                   // Optional, music picture
     }
 });
 </script>
 ```
+
+&emsp;&emsp;这里的歌曲url必须是在线音乐，当时现在大部分播放器都不会曝露出真实的歌曲播放地址，找资源很是费劲。这里给大家推荐一个[解析平台](http://www.qqmusic.cc/)，大部分的qq音乐还是可以解析出来或者直接在该平台上找到播放链接的。大家可以写多个music结构，以此来添加多个音乐。
+
+&emsp;&emsp;当然，我们还可以通过添加网易云音乐外链的方式在我们的博客中添加音乐。打开theme/next/layout/_custom/文件夹下的sidebar.swig文件，向其中添加以下代码：
+
+```html
+<div id="music163player">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=458789090&auto=0&height=66"></iframe>
+</div>
+```
+
+&emsp;&emsp;替换上述代码中的iframe标签之间的内容，就可以替换不同的音乐进行播放了。网易云音乐的歌单也可以生成外链，前提是歌单里的歌曲都有版权哦~
 
 #### 自定义播放器样式
 
