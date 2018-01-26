@@ -6,7 +6,7 @@ categories:
   - Leetcode
 tags:
   - Leetcode
-  - List
+  - Recursive
 ---
 
 ----------
