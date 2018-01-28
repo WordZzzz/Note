@@ -68,9 +68,9 @@ tags:
 
 - 4.利用鱼眼畸变模型求出拥有畸变时像素点对应的theta_d。
 
-
-
- 
+<p></p>
+<div align=center><img src="http://img.blog.csdn.net/20180128134953810?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTQ3NTIxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"/></div>
+<p></p>
 
 - 5.利用求出的theta_d值将三维坐标点重投影到二维图像平面得到(u,v)，(u,v)即为目标图像对应的畸变图像中像素点坐标。
 
@@ -193,7 +193,9 @@ void cv::fisheye::initUndistortRectifyMap( InputArray K, InputArray D, InputArra
 
 &emsp;&emsp;主要流程和上面Fisheye模型差不多，只有第4部分的畸变模型不一样，普通相机的畸变模型如下：
 
- 
+<p></p>
+<div align=center><img src="http://img.blog.csdn.net/20180128135032366?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTQ3NTIxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"/></div>
+<p></p> 
 
 &emsp;&emsp;同样把源代码贴上，并加上注解：
 
