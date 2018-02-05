@@ -18,13 +18,60 @@
 
 ## 解题思路
 
-层序遍历，之前求数的深度的时候简单用过。
+层序遍历，之前求树的深度的时候简单用过。
 
-在线测试由于种种原因，测试结果需要是一个二维数组（vector<vector<int> >），而不是原著中的每一层输出一行（其实意思都差不多），所以我们这里用两个队列进行实现（如果没有分行输出这个要求，一个队列就够了）。
+在线测试的测试结果需要是一个二维数组（vector<vector<int> >），而不是原著中的每一层输出一行（其实意思都差不多）。
 
 queue是先进先出规则，我们初始化两个queue（q1和q2）交替来存储每一层结点（这种结构在下一个题目中也将用到，只不过queue变成了stack），从而达到所谓的每一层输出一行。
 
+---2018/02/05更新开始---
+
+第一次做这道题的时候，竟然错把两个队列的实现当成了最优解。今天再回来看这道题，明明可以一个队列就能解决嘛，我也忘了当时自己是怎么想的了。
+
+所以这次将单队列的代码补上，同时保留双队列的代码。
+
+---2018/02/05更新结束---
+
+
 ## C++版代码实现
+
+### 单队列
+
+```c
+/*
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+    TreeNode(int x) :
+            val(x), left(NULL), right(NULL) {
+    }
+};
+*/
+class Solution {
+public:
+    vector<vector<int> > Print(TreeNode* pRoot) {
+        vector<vector<int> > ret;
+        queue<TreeNode*> que;
+        if(pRoot) que.push(pRoot);
+        while(!que.empty()){
+            vector<int> tmp;
+            int n = que.size();
+            while(n--){
+                TreeNode* node = que.front();
+                tmp.push_back(node->val);
+                if(node->left) que.push(node->left);
+                if(node->right) que.push(node->right);
+                que.pop();
+            }
+            ret.push_back(tmp);
+        }
+        return ret;
+    }
+};
+```
+
+### 双队列
 
 ```c
 /*
