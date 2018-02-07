@@ -44,15 +44,10 @@ Return the sum = 12 + 13 =25.
 
 ## 解题思路
 
-两种方法，递归和迭代，递归太简单了，直接贴出代码就不多说了。
-
-前序遍历需要注意的是，因为stack是后入先出规则，所以我们在入栈的时候，先将右子树入栈，再将坐子树入栈，这样在出栈的时候就可以保证是先左后右了。
-
+采用先序遍历的思想(根左右)+数字求和的思想(每一层都比上层和*10+当前根节点的值)。
 
 ## C++版代码实现
 
-### 递归
-
 ```c
 /**
  * Definition for binary tree
@@ -66,52 +61,19 @@ Return the sum = 12 + 13 =25.
 class Solution {
 public:
     
-    void preorder(TreeNode *root, vector<int> &res){
-        if(root){
-            res.push_back(root->val);
-            preorder(root->left, res);
-            preorder(root->right, res);
-        }
-    }
-    
-    vector<int> preorderTraversal(TreeNode *root) {
-        vector<int> res;
-        preorder(root, res);
-        return res;
-    }
-};
-```
-
-### 迭代
-
-```c
-/**
- * Definition for binary tree
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    vector<int> preorderTraversal(TreeNode *root) {
-        vector<int> res;
+    int preorder(TreeNode *root, int sum){
         if(root == NULL)
-            return res;
-        stack<TreeNode *> sta;
-        sta.push(root);
-        while(!sta.empty()){
-            TreeNode *cur = sta.top();
-            sta.pop();
-            res.push_back(cur->val);
-            if(cur->right)
-                sta.push(cur->right);
-            if(cur->left)
-                sta.push(cur->left);
-        }
-        return res;
+            return 0;
+        sum = sum * 10 + root->val;
+        if(root->left == NULL && root->right == NULL)
+            return sum;
+        return preorder(root->left, sum) + preorder(root->right, sum);
+    }
+    int sumNumbers(TreeNode *root) {
+        if(root == NULL)
+            return 0;
+        int sum = 0;
+        return preorder(root, sum);
     }
 };
 ```
