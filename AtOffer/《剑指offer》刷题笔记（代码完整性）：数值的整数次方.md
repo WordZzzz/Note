@@ -32,7 +32,7 @@
 
 方法二：迭代
 
-`!$a^n = \begin{cases} a^{n/2}*a^{n/2}, & \text{n为偶数} \\ a^{(n-1)/2}*a^{(n-1)/2}*a, & \text{n为奇数} \end{cases} $`
+`$a^n = \begin{cases} a^{n/2}*a^{n/2}, & \text{n为偶数} \\ a^{(n-1)/2}*a^{(n-1)/2}*a, & \text{n为奇数} \end{cases} $`
 
 这个公式很容易就用递归来实现。
 
@@ -141,6 +141,45 @@ public:
             return true;
         else
             return false;
+    }
+};
+```
+
+### 简化版循环
+
+```c
+class Solution {
+public:
+    double Power(double base, int exponent) {
+        int n = abs(exponent);
+        double result = 1.0;
+        while(n){
+            if(n & 1)
+                result *= base;
+            base *= base;
+            n >>= 1;
+        }
+        return exponent > 0 ? result : 1 / result;
+    }
+};
+```
+
+### 简化版递归
+
+```c
+class Solution {
+public:
+    double Power(double base, int exponent) {
+        int n = abs(exponent);
+        if(n == 0)
+            return 1;
+        if(n == 1)
+            return base;
+        double result = Power(base, n>>1);
+        result *= result;
+        if((n & 1) == 1)
+            result *= base;
+        return exponent > 0 ? result : 1/result;
     }
 };
 ```
