@@ -36,9 +36,9 @@
 
 这个公式很容易就用递归来实现。
 
-## C++版代码实现：
+## C++版代码实现
 
-### 调用pow：
+### 调用pow
 
 ```c
 class Solution {
@@ -57,7 +57,7 @@ public:
 };
 ```
 
-### 不调用pow：
+### 不调用pow
 
 ```
 class Solution {
@@ -98,7 +98,7 @@ public:
 };
 ```
 
-### 递归：
+### 递归
 
 ```c
 class Solution {
@@ -184,9 +184,9 @@ public:
 };
 ```
 
-## Python 代码实现：
+## Python 代码实现
 
-### 调用pow：
+### 调用pow
 
 ```python
 # -*- coding:utf-8 -*-
